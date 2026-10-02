@@ -1,19 +1,13 @@
 name: Nuclei Wordlist Generator
 
 on:
-  schedule:
-    - cron: '0 */12 * * *'
-  # push:
-  #   branches:
-  #     - main
-
-# Actions project permission
+  workflow_dispatch:
 permissions:
   contents: write
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Check out repository
